@@ -1,0 +1,7 @@
+<% @posts.each do |post| %>
+<h2><%= post.title %></h2>
+<div><%= truncate(post.body, :length => 35) %></div>
+<%#using the truncate methoddisplay on first 35 characters %>
+<br>
+ <%= link_to "Read Post", post %>
+<% end %>
