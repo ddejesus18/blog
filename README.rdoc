@@ -5,3 +5,4 @@ to create a Rails app for my blog. Here I will be practicing how to build a rail
 using my knowledge of Rails (obviously).
 
 Please feel free to clone and use it for you blog as well.
+rails 

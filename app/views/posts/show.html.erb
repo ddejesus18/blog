@@ -2,5 +2,13 @@
 <div>
   <%= @post.body %>
 </div>
-
+<br>
+ <%= link_to "Edit Post", edit_post_path(@post) %>
+ <%# we check the path in our rake routes to see the path and do @post to specify which post %>
 <%# this is pulling data from our model  & rendering it in a view%>
+
+<%= link_to "Delete", post_path(@post), method: :delete, data: {
+  confirm: "Are you sure?" } %>
+
+  <%# The method: :delete is telling rails we want to delete the post,
+  the data allows for a pop-up to confirm if you want to delete. %> 

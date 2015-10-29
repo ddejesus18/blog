@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
   #before actions get rooted and run it will find_post for particluar
   #action
   def index
@@ -40,6 +40,11 @@ class PostsController < ApplicationController
     else
       render 'edit'
   end
+end
+
+def destroy
+  @post.destroy
+  redirect_to root_path
 end
 #security feature of Ruby we need this private
   private
